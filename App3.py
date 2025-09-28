@@ -113,7 +113,7 @@ if st.button("Remove Log"):
         df.loc[idx, "Earned"] = 0.0
         save_data(df)  # <-- IMPORTANT: Save the change
         st.success(f"✅ Log for {date_to_remove} has been removed.")
-        st.experimental_rerun()  # Optional: Reruns the script to show the update instantly
+        st.rerun()  # Optional: Reruns the script to show the update instantly
     else:
         st.info(f"ℹ️ No hours were logged for {date_to_remove}, so there is nothing to remove.")
 
